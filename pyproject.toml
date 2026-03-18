@@ -1,0 +1,20 @@
+[project]
+name = "stacked-layout"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Chris Winikka",email = "3827026+HundredVisionsGuy@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">=3.9,<3.15"
+dependencies = [
+    "pyside6 (>=6.10.2,<7.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "stacked_layout", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
