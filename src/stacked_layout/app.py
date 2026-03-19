@@ -14,7 +14,7 @@ from PySide6.QtWidgets import (
     QStackedLayout,
     QWidget,
 )
-
+from page import Page
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -41,17 +41,7 @@ class MainWindow(QMainWindow):
         self.splash_page.setLayout(self.splash_screen)
 
         # Art Types Screen
-        self.art_types_page = QWidget()
-        self.art_types_screen = QGridLayout()
-        art_types_title_label = QLabel("Art Types")
-        self.art_types_to_splash_button = QPushButton("Home")
-        self.art_types_to_splash_button.clicked.connect(self.goto_page)
-        self.art_types_to_artist_button = QPushButton("Artist Search")
-        self.art_types_to_artist_button.clicked.connect(self.goto_page)
-        self.art_types_screen.addWidget(art_types_title_label, 0, 0, 1, 3)
-        self.art_types_screen.addWidget(self.art_types_to_splash_button, 1, 0)
-        self.art_types_screen.addWidget(self.art_types_to_artist_button, 1, 2)
-        self.art_types_page.setLayout(self.art_types_screen)
+        self.art_types_page = Page("Art Types", self.stacked_layout)
 
         # Artist Search Screen
         self.artist_page = QWidget()
