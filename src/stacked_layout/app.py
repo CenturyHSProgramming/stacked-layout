@@ -41,9 +41,10 @@ class MainWindow(QMainWindow):
         self.splash_page.setLayout(self.splash_screen)
 
         # Art Types Screen
-        self.art_types_page = Page("Art Types", self.stacked_layout)
+        self.art_types_page = Page("Art Types")
 
         # Artist Search Screen
+        # self.artist_page = Page("Artist Search")
         self.artist_page = QWidget()
         self.artist_search_screen = QGridLayout()
         artist_title_label = QLabel("Artist Search")

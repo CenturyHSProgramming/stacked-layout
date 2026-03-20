@@ -16,11 +16,9 @@ from PySide6.QtWidgets import (
 
 class Page(QWidget):
     """A """
-    def __init__(self, title, stacked_layout):
+    def __init__(self, title):
         super().__init__()
         self.title = title
-        self.stacked_layout = stacked_layout
-        print(f"Incoming: {id(stacked_layout)} v self.incoming {id(self.stacked_layout)}")
         self.screen = QGridLayout()
         self.title_label = QLabel(title)
 
